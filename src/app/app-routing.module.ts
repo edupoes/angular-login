@@ -11,17 +11,18 @@ const routes: Routes =
     },
    // Parte privada controlada por el guard. Por defecto carga vista1
     {
-      path: 'dashboard', component: Vista1Component, children: [
-        {
-          path: 'vista1',
-          component: Vista1Component
-        },
-        // En un principio el acceso a la ruta no estará protegido. Cualquier usuario logueado puede acceder
-        {
-          path: 'vista2',
-          component: Vista2Component
-        }
-      ],
+      path: 'dashboard', component: Vista1Component, 
+        children: [
+          {
+            path: 'vista1',
+            component: Vista1Component
+          },
+          // En un principio el acceso a la ruta no estará protegido. Cualquier usuario logueado puede acceder
+          {
+            path: 'vista2',
+            component: Vista2Component
+          }
+        ],
       // Compruebo que el usuario esté autentificado
       canActivate: [AuthGuard]
     },
