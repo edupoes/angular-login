@@ -10,7 +10,7 @@ TODO - Encriptar las contraseñas
  */
 const USUARIOS: Array<Usuario> = [
   { nombre: 'eduardo', pass: '1234' },
-  { nombre: 'carlos', pass: '4321' }
+  { nombre: 'odraude', pass: '4321' }
 ];
 
 @Injectable({
@@ -25,7 +25,7 @@ export class InterceptorService implements HttpInterceptor  {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     // Intercepto el falso POST a token aunque para la DEMO no haría falta comprobar el req.xxx
-    if (req.method === 'POST' && req.url === 'http://localhost:4200/token') {
+    if (req.method === 'POST' && req.url.endsWith('/token')) {
       const usuario: Usuario = req.body;
       const correcto: boolean = USUARIOS
         .findIndex( (user) => user.nombre === usuario.nombre.toLowerCase() && user.pass === usuario.pass.toLowerCase()) > -1;

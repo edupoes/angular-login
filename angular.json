@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "codelab17": {
+    "simple-login": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/codelab17",
+            "outputPath": "dist/simple-login",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -88,18 +88,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "codelab17:build"
+            "browserTarget": "simple-login:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "codelab17:build:production"
+              "browserTarget": "simple-login:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "codelab17:build"
+            "browserTarget": "simple-login:build"
           }
         },
         "test": {
@@ -136,15 +136,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "codelab17:serve"
+            "devServerTarget": "simple-login:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "codelab17:serve:production"
+              "devServerTarget": "simple-login:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "codelab17"
+  "defaultProject": "simple-login"
 }
