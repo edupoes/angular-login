@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       Vista 1
     </p>
 
-    <p *authIf="'carlos'">Soy Carlos</p>
+    <p *authIf="'odraude'">Soy odraude</p>
     <p *authIf="'eduardo'">Soy Eduardo</p>
 
   `,
